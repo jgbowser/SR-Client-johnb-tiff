@@ -1,0 +1,30 @@
+.header_container {
+  background-color: rgb(0, 1, 49);
+  text-align: center;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 5px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.greeting {
+  color: #fff;
+}
+
+.nav_links {
+  text-decoration: none;
+  color: #fff;
+}
+
+.title_text {
+  text-decoration: none;
+  color: #fff;
+}

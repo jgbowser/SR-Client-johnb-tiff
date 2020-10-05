@@ -1,0 +1,12 @@
+.register_page {
+  text-align: center;
+  background-color: rgb(3, 5, 92);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.desc {
+  margin: 0;
+  padding: 10px 0 0 0;
+  font-size: 14px;
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
-import './Header.css'
+import headerStyles from './Header.module.css'
 
 class Header extends Component {
   static contextType = UserContext
@@ -14,11 +14,12 @@ class Header extends Component {
   renderLogoutLink() {
     return (
       <div>
-        <span>
-          {this.context.user.name}
+        <span className={headerStyles.greeting}>
+          Hello, {this.context.user.name}
         </span>
-        <nav>
+        <nav className={headerStyles.nav}>
           <Link
+            className={headerStyles.nav_links}
             onClick={this.handleLogoutClick}
             to='/login'>
             Logout
@@ -30,19 +31,19 @@ class Header extends Component {
 
   renderLoginLink() {
     return (
-      <nav>
-        <Link to='/login'>Login</Link>
+      <nav className={headerStyles.nav}>
+        <Link className={headerStyles.nav_links} to='/login'>Login</Link>
         {' '}
-        <Link to='/register'>Sign up</Link>
+        <Link className={headerStyles.nav_links} to='/register'>Sign up</Link>
       </nav>
     )
   }
 
   render() {
     return (
-      <header>
-        <h1>
-          <Link to='/'>
+      <header className={headerStyles.header_container}>
+        <h1 className={headerStyles.title}>
+          <Link className={headerStyles.title_text} to='/'>
             Spaced repetition
           </Link>
         </h1>
