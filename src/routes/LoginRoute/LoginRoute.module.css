@@ -1,12 +1,11 @@
-.register_page {
+.login_page {
   text-align: center;
   background-color: rgb(3, 5, 92);
   color: #fff;
   min-height: calc(100vh - 80px);
 }
 
-.desc {
+.login_page h2 {
   margin: 0;
-  padding: 10px 0 0 0;
-  font-size: 14px;
+  padding: 20px;
 }

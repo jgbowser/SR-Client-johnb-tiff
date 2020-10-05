@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
-
+import loginPageStyles from './LoginRoute.module.css'
 class LoginRoute extends Component {
   static defaultProps = {
     location: {},
@@ -17,7 +17,7 @@ class LoginRoute extends Component {
 
   render() {
     return (
-      <section>
+      <section className={loginPageStyles.login_page}>
         <h2>Login</h2>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
