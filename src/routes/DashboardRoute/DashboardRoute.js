@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import ApiContext from '../../contexts/UserContext'
 
 class DashboardRoute extends Component {
+  static contextType = ApiContext;
+
   render() {
+    const { user={}, error=null } = this.context
     return (
       <section>
         <h2>Spanish</h2>
