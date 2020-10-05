@@ -3,9 +3,9 @@ import config from '../config'
 
 const LanguageApiService = {
   getLanguage() {
-    return fetch(`${config.API_ENDPOINT}`, {  
+    return fetch(`${config.API_ENDPOINT}/language`, {  
         headers: {
-            'authorization' : `basic ${TokenService.getAuthToken()}`,
+            'authorization' : `bearer ${TokenService.getAuthToken()}`,
           },
     })
       .then((res) => {
@@ -15,9 +15,9 @@ const LanguageApiService = {
       })
   },
   getWords() {
-    return fetch(`${config.API_ENDPOINT}/head`, {
+    return fetch(`${config.API_ENDPOINT}/language/head`, {
         headers: {
-            'authorization' : `basic ${TokenService.getAuthToken()}`,
+            'authorization' : `bearer ${TokenService.getAuthToken()}`,
           },
     })
       .then((res) => {
@@ -27,10 +27,10 @@ const LanguageApiService = {
       })
   },
   postGuess() {
-    return fetch(`${config.API_ENDPOINT}/guess`, {
+    return fetch(`${config.API_ENDPOINT}/language/guess`, {
         method: 'POST',
         headers: {
-            'authorization' : `basic ${TokenService.getAuthToken()}`,
+            'authorization' : `bearer ${TokenService.getAuthToken()}`,
             'content-type': 'application/json',
           },
     })
