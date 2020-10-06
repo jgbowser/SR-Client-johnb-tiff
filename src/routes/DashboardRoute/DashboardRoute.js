@@ -25,7 +25,6 @@ class DashboardRoute extends Component {
     return (
       <section className={dashStyles.dashboard}>
         <h2>{language.name}</h2>
-        <Link to='/learn' className={dashStyles.link}>Start practicing</Link>
         <h3>Words to practice</h3>
 
         <ul>
@@ -33,6 +32,7 @@ class DashboardRoute extends Component {
         </ul>
 
         <p>Total correct answers: {language.total_score}</p>
+        <Link to='/learn' className={dashStyles.link}>Start practicing</Link>
       </section>
     );
   }
