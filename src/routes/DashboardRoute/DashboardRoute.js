@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import LanguageApiService from '../../services/language-service'
 import LanguageContext from '../../contexts/LanguageContext';
 
@@ -32,7 +33,7 @@ class DashboardRoute extends Component {
       <section>
         <h2>{language.name}</h2>
         <h3>Start Practicing</h3>
-        <button>Start</button>
+        <Link to={'/learn'}>Start</Link>
         <h3>Words to practice</h3>
         
         <ul>
