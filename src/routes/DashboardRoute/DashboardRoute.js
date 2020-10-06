@@ -1,14 +1,28 @@
 import React, { Component } from 'react'
 import ApiContext from '../../contexts/UserContext'
+import LanguageApiService from '../../services/language-service'
+import LanguageContext from '../../contexts/LanguageContext';
 
 class DashboardRoute extends Component {
-  static contextType = ApiContext;
+
+  static contextType = LanguageContext
+
+  async componentDidMount() {
+    try {
+      const languageData = await LanguageApiService.getLanguageAndWords()
+      await this.context.setLanguageAndWords(languageData)
+    } catch(error) {
+      //set error
+    }
+  }
+  
 
   render() {
-    const { user={}, error=null } = this.context
+    
+    const { language } = this.context
     return (
       <section>
-        <h2>Spanish</h2>
+        <h2>{language.name}</h2>   
         <h3>Start Practicing</h3>
         <button>Start</button>
         <h4>Words to practice...</h4>

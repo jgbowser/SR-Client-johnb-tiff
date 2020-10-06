@@ -2,14 +2,14 @@ import TokenService from './token-service'
 import config from '../config'
 
 const LanguageApiService = {
-  getLanguage() {
+  getLanguageAndWords() {
     return fetch(`${config.API_ENDPOINT}/language`, {  
         headers: {
             'authorization' : `bearer ${TokenService.getAuthToken()}`,
           },
     })
       .then((res) => {
-          (!res.ok)
+          return (!res.ok)
             ? res.json().then(e => Promise.reject(e))
             : res.json()
       })
@@ -41,4 +41,4 @@ const LanguageApiService = {
       })
   }
 }
-module.exports = LanguageApiService
+export default LanguageApiService
