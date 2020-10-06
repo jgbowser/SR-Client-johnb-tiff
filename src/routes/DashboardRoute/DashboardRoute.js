@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-import { Link } from 'react-router-dom'
-=======
 import {Link} from 'react-router-dom'
->>>>>>> 1118d95370ec76157b453559e83da02cbf748926
 import LanguageApiService from '../../services/language-service'
 import LanguageContext from '../../contexts/LanguageContext'
 import WordListItem from '../../components/WordListItem/WordListItem'
