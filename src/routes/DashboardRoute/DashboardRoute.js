@@ -34,19 +34,9 @@ class DashboardRoute extends Component {
         <h3>Start Practicing</h3>
         <button>Start</button>
         <h3>Words to practice</h3>
+        
         <ul>
          {wordList}
-        </ul>
-        <h4>Word || Correct Answer Count || Incorrect Answer Count</h4>
-        <ul>
-          <li>bruja || 1 || 0</li>
-          <li>bruja || 1 || 0</li>
-          <li>bruja || 1 || 0</li>
-          <li>bruja || 1 || 0</li>
-          <li>bruja || 1 || 0</li>
-          <li>bruja || 1 || 0</li>
-          <li>bruja || 1 || 0</li>
-          <li>bruja || 1 || 0</li>
         </ul>
       
         <p>Total correct answers: {language.total_score}</p>

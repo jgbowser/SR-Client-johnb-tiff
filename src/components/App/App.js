@@ -25,8 +25,6 @@ export default class App extends Component {
   }
 
   setLanguageAndWords = (data) => {
-  //console.log(this.state)
-  //console.log(data.language)
       this.setState({
         language: data.language,
         words: data.words
