@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LanguageApiService from '../../services/language-service'
-import LanguageContext from '../../contexts/LanguageContext';
+import LanguageContext from '../../contexts/LanguageContext'
+import WordListItem from '../../components/WordListItem/WordListItem'
 
 class DashboardRoute extends Component {
 
@@ -15,19 +16,10 @@ class DashboardRoute extends Component {
     }
   }
 
-  renderWordsList = (words) => {
-    return words.map(word => 
-       (
-      <li key={word.id} className='word-to-study'>
-              {word.translation} || {word.correct_count} || {word.incorrect_count}
-            </li>
-    ))
-  }
-
   render() {
     
     const { language, words } = this.context
-    const wordList = this.renderWordsList(words)
+    const wordList = words.map(word =>  <WordListItem word={word}/> )
     return (
       <section>
         <h2>{language.name}</h2>
