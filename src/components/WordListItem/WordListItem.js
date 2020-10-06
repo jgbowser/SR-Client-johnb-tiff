@@ -10,8 +10,8 @@ export default function WordListItem(props) {
           <h4>{original}</h4>
         </div>
         <div>
-          <span>Correct answer count: {incorrect_count}</span>
-          <span>Incorrect answer count: {correct_count}</span>
+          <span> correct answer count: {correct_count} </span>
+          <span> incorrect answer count: {incorrect_count} </span>
         </div>
       </li>
     )
