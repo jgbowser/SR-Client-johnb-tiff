@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ApiContext from '../../contexts/UserContext'
 import LanguageApiService from '../../services/language-service'
 import LanguageContext from '../../contexts/LanguageContext';
 
@@ -10,45 +9,47 @@ class DashboardRoute extends Component {
   async componentDidMount() {
     try {
       const languageData = await LanguageApiService.getLanguageAndWords()
-      await this.context.setLanguageAndWords(languageData)
-    } catch(error) {
-      //set error
+      this.context.setLanguageAndWords(languageData)
+    } catch (error) {
+      console.log(error)
     }
   }
-  
+
+  renderWordsList = (words) => {
+    return words.map(word => 
+       (
+      <li key={word.id} className='word-to-study'>
+              {word.translation} || {word.correct_count} || {word.incorrect_count}
+            </li>
+    ))
+  }
 
   render() {
     
-    const { language } = this.context
+    const { language, words } = this.context
+    const wordList = this.renderWordsList(words)
     return (
       <section>
-        <h2>{language.name}</h2>   
+        <h2>{language.name}</h2>
         <h3>Start Practicing</h3>
         <button>Start</button>
-        <h4>Words to practice...</h4>
-          <ul>
-            <li>bruja</li>
-            <li>bruja</li>
-            <li>bruja</li>
-            <li>bruja</li>
-            <li>bruja</li>
-            <li>bruja</li>
-            <li>bruja</li>
-            <li>bruja</li>
-          </ul>
-          <h4>Word || Correct Answer Count || Incorrect Answer Count</h4>
-            <ul>
-            <li>bruja || 1 || 0</li>
-            <li>bruja || 1 || 0</li>
-            <li>bruja || 1 || 0</li>
-            <li>bruja || 1 || 0</li>
-            <li>bruja || 1 || 0</li>
-            <li>bruja || 1 || 0</li>
-            <li>bruja || 1 || 0</li>
-            <li>bruja || 1 || 0</li>
-            </ul>
-          <h4>Total Correct</h4>
-            <p>8</p>
+        <h3>Words to practice</h3>
+        <ul>
+         {wordList}
+        </ul>
+        <h4>Word || Correct Answer Count || Incorrect Answer Count</h4>
+        <ul>
+          <li>bruja || 1 || 0</li>
+          <li>bruja || 1 || 0</li>
+          <li>bruja || 1 || 0</li>
+          <li>bruja || 1 || 0</li>
+          <li>bruja || 1 || 0</li>
+          <li>bruja || 1 || 0</li>
+          <li>bruja || 1 || 0</li>
+          <li>bruja || 1 || 0</li>
+        </ul>
+      
+        <p>Total correct answers: {language.total_score}</p>
       </section>
     );
   }
