@@ -16,9 +16,9 @@ input[type=text], input[type=password] {
   justify-content: flex-end;
   padding: .5em;
 }
-.form_row > input{
+/* .form_row > input{
 padding: .5em;
-}
+} */
 
 .form_row > label {
   padding-bottom: 10px;

@@ -1,7 +1,7 @@
 .dashboard{
     background-color: rgb(3, 5, 92);
     color: white;
-    min-height: 100%;
+    min-height: caLc(100vh - 80px);
     max-width: 100%;
     padding: 20px;
 
