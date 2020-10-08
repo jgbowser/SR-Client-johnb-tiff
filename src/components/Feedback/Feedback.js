@@ -1,4 +1,4 @@
-import React from 'react-dom'
+import React from 'react'
 
 
 function renderFeedback(feedback) {
@@ -12,8 +12,8 @@ export default function Feedback(props) {
        return (
            <div>
                {renderFeedback(props.isCorrect)}
-               <p>The correct translation for {props.word} was {props.answer} and you chose {props.guess}!</p>
-               <p>Your total score is: {props.totalScore}</p>
+               <p className='DisplayTranslation'>The correct translation for {props.word} was {props.answer} and you chose {props.guess}!</p>
+               <p className='DisplayScore'>Your total score is: {props.totalScore}</p>
                <button>Try another word!</button>
            </div>
        )
