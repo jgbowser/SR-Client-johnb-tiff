@@ -52,7 +52,7 @@ class LearningRoute extends Component {
         <form>
           <label htmlFor='learn-guess-input'>What's the translation for this word?</label>
             <input value={this.state.guess} onChange={(e)=> this.updateInput(e.target.value)} className={LearningStyles.textBox} type='text' id='learn-guess-input' required></input>
-            <button className={LearningStyles.submitBtn} onSubmit={(e)=> this.handleSubmit} type='submit'>Submit your answer</button>
+            <button className={LearningStyles.submitBtn} onSubmit={(e)=> this.handleSubmit(e)} type='submit'>Submit your answer</button>
         </form>
         <div className={LearningStyles.wordScore}>
           <p>You have answered this word correctly {wordCorrectCount} times.</p>
