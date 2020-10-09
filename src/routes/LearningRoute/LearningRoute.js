@@ -54,6 +54,13 @@ class LearningRoute extends Component {
   updateInput = (value) => {
     this.setState({guess: value})
   }
+
+  nextWord = () => {
+    this.setState({
+      responseRecieved: false,
+      guess: '',
+    })
+  }
   
   render() {
 
@@ -68,8 +75,8 @@ class LearningRoute extends Component {
       guess  
     } = this.state
     return (
-      <section>
-        {responseRecieved ? <Feedback isCorrect={isCorrect} word={previousWord} answer={answer} totalScore={totalScore} guess={guess} /> : 
+      <section className={LearningStyles.learningPage}>
+        {responseRecieved ? <Feedback nextWord={this.nextWord} isCorrect={isCorrect} word={previousWord} answer={answer} totalScore={totalScore} guess={guess} /> : 
         (
         <>
           <h2>Translate the word:</h2>
