@@ -15,14 +15,19 @@ h2, p{
 .link{
     size: 5em;
     margin: 25px auto 10px auto;
-    max-width: 150px;
+    max-width: 200px;
     display: block;
-    border: .1em solid white;
-    background-color: tomato;
-    color: white;
+    border: 2px solid rgb(0, 1, 69);
+    background-color: #ED9C5D;
+    color: rgb(0, 1, 69);
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 8px;
+}
+
+.link:hover {
+    background-color: #FEC369;
+    box-shadow: 0 0 10px 2px #595358;
 }
 
 ul{
