@@ -82,7 +82,7 @@ class LearningRoute extends Component {
           <h2>Translate the word:</h2>
           <span className={LearningStyles.word}>{nextWord}</span>
           <p className={LearningStyles.total}>Your total score is: {totalScore}</p>
-          <form onSubmit={(e)=> this.handleSubmit(e)} >
+          <form onSubmit={(e)=> this.handleSubmit(e)} className={LearningStyles.guessForm}>
             <label htmlFor='learn-guess-input'>What's the translation for this word?</label>
               <input value={this.state.guess} onChange={(e)=> this.updateInput(e.target.value)} className={LearningStyles.textBox} type='text' id='learn-guess-input' required></input>
               <button className={LearningStyles.submitBtn} type='submit'>Submit your answer</button>

@@ -1,5 +1,5 @@
 .header_container {
-  background-color: rgb(0, 1, 49);
+  background-color: #595358;
   text-align: center;
 }
 
@@ -16,15 +16,54 @@
 }
 
 .greeting {
-  color: #fff;
+  color: #ED9C5D;
 }
 
 .nav_links {
   text-decoration: none;
-  color: #fff;
+  color: #ED9C5D;
 }
 
 .title_text {
   text-decoration: none;
-  color: #fff;
+  color: #ED9C5D;
+}
+
+@media all and (min-width: 650px) {
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  .title {
+    margin-left: 25px;
+  }
+
+  .nav {
+    flex: 1;
+    margin-right: 25px;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
+
+  .nav_links:first-child {
+    margin-right: 25px;
+  }
+
+  .nav_greeting {
+    flex: 1;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .greeting {
+    flex: 6;
+  }
+
+  .nav_greeting .nav_links {
+    margin: 0;
+  }
+
 }

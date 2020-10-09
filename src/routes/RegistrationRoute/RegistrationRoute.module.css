@@ -1,12 +1,12 @@
 .register_page {
   text-align: center;
-  background-color: rgb(3, 5, 92);
+  background-color: #6B668E;
   color: #fff;
   min-height: calc(100vh - 80px);
 }
 
 .desc {
-  margin: 0;
-  padding: 10px 0 0 0;
+  margin: 0 0 20px 0;
+  padding: 25px 25px 0;
   font-size: 14px;
 }

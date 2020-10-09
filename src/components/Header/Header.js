@@ -13,7 +13,7 @@ class Header extends Component {
 
   renderLogoutLink() {
     return (
-      <div>
+      <div className={headerStyles.nav_greeting}>
         <span className={headerStyles.greeting}>
           Hello, {this.context.user.name}
         </span>

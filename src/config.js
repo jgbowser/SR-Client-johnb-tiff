@@ -1,7 +1,7 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000/api',
+  API_ENDPOINT: 'https://murmuring-shelf-10969.herokuapp.com/api',
   TOKEN_KEY: 'blogful-client-auth-token',
 }
 
-// '' <= dev server address
-//https://murmuring-shelf-10969.herokuapp.com/api
+// 'http://localhost:8000/api' <= dev server address
+//

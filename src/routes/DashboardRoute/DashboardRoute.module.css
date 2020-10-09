@@ -1,5 +1,5 @@
 .dashboard{
-    background-color: rgb(3, 5, 92);
+    background-color: #6B668E;
     color: white;
     min-height: caLc(100vh - 98px);
     max-width: 100%;
@@ -30,6 +30,8 @@ ul{
     padding: 0;
     border: 1px solid #fff;
     border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto 10px auto;
 }
 
 ul li {
