@@ -8,7 +8,7 @@
 Spaced repetition is an advanced learning technique that enhances ones learning through an algorithm based upon repetition. The learner is quizzed on a sequence of words and when the learner answers incorrectly, they will see the word within a shorter time period versus if they answer correctly, they will see the word in a longer time period. With the number of Spanish speakers on the rise and halloween right around the corner, Spanish SRS was built with amusement and utility in mind.  
 
 ### How to use:  
-1. Create a username and login.
+1. Create a username and login.<br>
 <img src='/src/images/README_assets/signup.png' width='300' />  <img src='/src/images/README_assets/login.png' width='300' /><br>              
 2. View the list of words to learn on the 'Dashboard page', then click the 'Start practicing' link to get started.<br>
 <img src='/src/images/README_assets/dashboard.png' width='300' /><br>  
