@@ -20,7 +20,9 @@
   color: #ED9C5D;
 }
 
-.nav_links {
+.nav_links,
+.nav_links_1,
+.nav_links_2 {
   text-decoration: none;
   color: #ED9C5D;
 }
@@ -43,10 +45,25 @@
   }
 
   .nav {
+    height: 100%;
+    position: relative;
+    display:flex;
+    flex-direction: column;
     flex: 1;
     margin-right: 25px;
-    align-self: flex-end;
-    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .nav_links_1 {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+
+  .nav_links_2 {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
   }
 
   .nav_links {

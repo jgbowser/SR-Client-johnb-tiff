@@ -31,11 +31,11 @@ class Header extends Component {
 
   renderLoginLink() {
     return (
-      <nav className={headerStyles.nav}>
-        <Link className={headerStyles.nav_links} to='/login'>Login</Link>
-        {' '}
-        <Link className={headerStyles.nav_links} to='/register'>Sign up</Link>
-      </nav>
+        <nav className={headerStyles.nav}>
+          <Link className={headerStyles.nav_links_1} to='/login'>Login</Link>
+          {' '}
+          <Link className={headerStyles.nav_links_2} to='/register'>Sign up</Link>
+        </nav>
     )
   }
 
