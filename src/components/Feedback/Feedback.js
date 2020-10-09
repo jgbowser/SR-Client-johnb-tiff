@@ -10,7 +10,7 @@ function renderFeedback(feedback) {
 
 export default function Feedback(props) {
        return (
-           <div>
+           <div className={feedbackStyles.feedback_container}>
                {renderFeedback(props.isCorrect)}
                <div className='DisplayFeedback'>
                <p>The correct translation for {props.word} was {props.answer} and you chose {props.guess}!</p>
