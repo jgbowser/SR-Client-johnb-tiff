@@ -44,7 +44,7 @@ class Header extends Component {
       <header className={headerStyles.header_container}>
         <h1 className={headerStyles.title}>
           <Link className={headerStyles.title_text} to='/'>
-            Spaced repetition
+            Spanish SRS
           </Link>
         </h1>
         {TokenService.hasAuthToken()
