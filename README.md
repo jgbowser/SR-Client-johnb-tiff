@@ -9,12 +9,12 @@ Spaced repetition is an advanced learning technique that enhances ones learning 
 
 ### How to use:  
 1. Create a username and login.
-<img src='/src/images/README_assets/signup.png' width='300' />        <img src='/src/images/README_assets/login.png' width='300' />              
-2. View the list of words to learn on the 'Dashboard page', then click the 'Start practicing' link to get started.
-<img src='/src/images/README_assets/dashboard.png' width='300' />  
-3. Once on the 'Learning Route', the user will be presented with a spanish word and will then need to type in what they believe the translation is. If they guess correct, the user will be congratulated and will gain a point towards 'correct guesses' and the first word will then be pushed further into the list. If they guess incorrect, the user will gain a point towards 'incorrect guesses' and the word will be pushed to the next, next item in the list. This process continues to loop until the user is ready to take a break and log off.
-<img src='/src/images/README_assets/learn.png' width='300' />
-<img src='/src/images/README_assets/correct.png' width='300' />       <img src='/src/images/README_assets/incorrect.png' width='300' />
+<img src='/src/images/README_assets/signup.png' width='300' />  <img src='/src/images/README_assets/login.png' width='300' /><br>              
+2. View the list of words to learn on the 'Dashboard page', then click the 'Start practicing' link to get started.<br>
+<img src='/src/images/README_assets/dashboard.png' width='300' /><br>  
+3. Once on the 'Learning Route', the user will be presented with a spanish word and will then need to type in what they believe the translation is. If they guess correct, the user will be congratulated and will gain a point towards 'correct guesses' and the first word will then be pushed further into the list. If they guess incorrect, the user will gain a point towards 'incorrect guesses' and the word will be pushed to the next, next item in the list. This process continues to loop until the user is ready to take a break and log off.<br>
+<img src='/src/images/README_assets/learn.png' width='300' /><br>
+<img src='/src/images/README_assets/correct.png' width='300' />  <img src='/src/images/README_assets/incorrect.png' width='300' /><br>
 4. The user's score and correct/incorrect guesses will be saved in the database, so each time they log on they may begin where they left off.
 
 ### Tech Stack:  
