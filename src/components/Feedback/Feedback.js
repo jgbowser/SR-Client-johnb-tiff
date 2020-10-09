@@ -13,12 +13,12 @@ export default function Feedback(props) {
            <div className={feedbackStyles.feedback_container}>
                {renderFeedback(props.isCorrect)}
                <div className='DisplayFeedback'>
-                <p>The correct translation for {props.word} was {props.answer} and you chose {props.guess}!</p>
+                <p className={feedbackStyles.feedback}>The correct translation for {props.word} was {props.answer} and you chose {props.guess}!</p>
                </div>
                <div className='DisplayScore'>
-                <p>Your total score is: {props.totalScore}</p>
+                <p className={feedbackStyles.score}>Your total score is: {props.totalScore}</p>
                </div>
-               <button onClick={props.nextWord}>Try another word!</button>
+               <button className={feedbackStyles.btn} onClick={props.nextWord}>Try another word!</button>
            </div>
        )
 }
