@@ -21,7 +21,7 @@ class DashboardRoute extends Component {
   render() {
 
     const { language, words } = this.context
-    const wordList = words.map(word => <WordListItem word={word} />)
+    const wordList = words.map(word => <WordListItem key={word.id} word={word} />)
     return (
       <section className={dashStyles.dashboard}>
         <h2>{language.name}</h2>

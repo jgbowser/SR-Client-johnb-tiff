@@ -6,6 +6,7 @@ import Feedback from '../../components/Feedback/Feedback'
 class LearningRoute extends Component {
   state = {
     nextWord: '',
+    previousWord: '',
     answer: '',
     nextWordCorrectCount: '',
     nextWordIncorrectCount: '',
@@ -39,9 +40,11 @@ class LearningRoute extends Component {
   async handleSubmit(e) {
     e.preventDefault()
       const res = await LanguageApiService.postGuess(this.state.guess)
+      const prevWord = this.state.nextWord
       this.setState({
         responseRecieved: true,
         nextWord: res.nextWord,
+        previousWord: prevWord,
         answer: res.answer,
         nextWordCorrectCount: res.wordCorrectCount,
         nextWordIncorrectCount: res.wordIncorrectCount,
@@ -56,22 +59,27 @@ class LearningRoute extends Component {
   
   render() {
 
-    const { nextWord, wordCorrectCount, wordIncorrectCount, totalScore, isCorrect, responseRecieved, answer  } = this.state
+    const { nextWord, wordCorrectCount, wordIncorrectCount, totalScore, isCorrect, responseRecieved, answer, previousWord, guess  } = this.state
     return (
       <section>
-        {responseRecieved ? <Feedback isCorrect={isCorrect} word={nextWord} answer={answer} totalScore={totalScore} /> : null}
-        <h2>Translate the word:</h2>
-        <span className={LearningStyles.word}>{nextWord}</span>
-        <p className={LearningStyles.total}>Your total score is: {totalScore}</p>
-        <form onSubmit={(e)=> this.handleSubmit(e)} >
-          <label htmlFor='learn-guess-input'>What's the translation for this word?</label>
-            <input value={this.state.guess} onChange={(e)=> this.updateInput(e.target.value)} className={LearningStyles.textBox} type='text' id='learn-guess-input' required></input>
-            <button className={LearningStyles.submitBtn} type='submit'>Submit your answer</button>
-        </form>
-        <div className={LearningStyles.wordScore}>
-          <p>You have answered this word correctly {wordCorrectCount} times.</p>
-          <p>You have answered this word incorrectly {wordIncorrectCount} times.</p>
-        </div>
+        {responseRecieved ? <Feedback isCorrect={isCorrect} word={previousWord} answer={answer} totalScore={totalScore} guess={guess} /> : 
+        (
+        <>
+          <h2>Translate the word:</h2>
+          <span className={LearningStyles.word}>{nextWord}</span>
+          <p className={LearningStyles.total}>Your total score is: {totalScore}</p>
+          <form onSubmit={(e)=> this.handleSubmit(e)} >
+            <label htmlFor='learn-guess-input'>What's the translation for this word?</label>
+              <input value={this.state.guess} onChange={(e)=> this.updateInput(e.target.value)} className={LearningStyles.textBox} type='text' id='learn-guess-input' required></input>
+              <button className={LearningStyles.submitBtn} type='submit'>Submit your answer</button>
+          </form>
+          <div className={LearningStyles.wordScore}>
+            <p>You have answered this word correctly {wordCorrectCount} times.</p>
+            <p>You have answered this word incorrectly {wordIncorrectCount} times.</p>
+          </div>
+        </>
+        )
+        }
       </section>
     );
   }
