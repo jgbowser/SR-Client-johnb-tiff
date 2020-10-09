@@ -8,8 +8,6 @@ class LearningRoute extends Component {
     nextWord: '',
     previousWord: '',
     answer: '',
-    nextWordCorrectCount: '',
-    nextWordIncorrectCount: '',
     wordCorrectCount: '',
     wordIncorrectCount: '',
     totalScore: '',
@@ -46,8 +44,8 @@ class LearningRoute extends Component {
         nextWord: res.nextWord,
         previousWord: prevWord,
         answer: res.answer,
-        nextWordCorrectCount: res.wordCorrectCount,
-        nextWordIncorrectCount: res.wordIncorrectCount,
+        wordCorrectCount: res.wordCorrectCount,
+        wordIncorrectCount: res.wordIncorrectCount,
         totalScore: res.totalScore,
         isCorrect: res.isCorrect,
       })
@@ -59,7 +57,16 @@ class LearningRoute extends Component {
   
   render() {
 
-    const { nextWord, wordCorrectCount, wordIncorrectCount, totalScore, isCorrect, responseRecieved, answer, previousWord, guess  } = this.state
+    const { 
+      nextWord, 
+      wordCorrectCount, 
+      wordIncorrectCount, 
+      totalScore, isCorrect, 
+      responseRecieved, 
+      answer, 
+      previousWord, 
+      guess  
+    } = this.state
     return (
       <section>
         {responseRecieved ? <Feedback isCorrect={isCorrect} word={previousWord} answer={answer} totalScore={totalScore} guess={guess} /> : 
