@@ -40,4 +40,5 @@ padding: .5em;
 
 .form button:hover {
   background-color: #FEC369;
+  box-shadow: 0 0 10px 2px #595358;
 }

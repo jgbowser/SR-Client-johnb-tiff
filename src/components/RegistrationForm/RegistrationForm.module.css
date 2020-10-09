@@ -38,6 +38,11 @@ padding: .5em;
   border-radius: 8px;
 }
 
+.form button:hover {
+  background-color: #FEC369;
+  box-shadow: 0 0 10px 2px #595358;
+}
+
 .login {
   display: block;
   color: #fff;
