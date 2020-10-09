@@ -1,47 +1,17 @@
-# Spaced Repetition Capstone
+# Spaced Repetition: Spanish SRS
+### by [John Bowser](https://github.com/jgbowser) and [Tiffany Summerford](https://github.com/breakfastatiffs)   
+[Spanish SRS](https://language-spaced-repetition.vercel.app/register) ||
+[Client GitHub](https://github.com/thinkful-ei-quail/SR-Client-johnb-tiff) ||
+[Server GitHub](https://github.com/thinkful-ei-quail/SR-API-johnb-tiff)  
+ 
+#### About:  
+Spaced repetition is an advanced learning technique that enhances ones learning through an algorithm based upon repetition. The learner is quizzed on a sequence of words and when the learner answers incorrectly, they will see the word within a shorter time period versus if they answer correctly, they will see the word in a longer time period. With the number of Spanish speakers on the rise and halloween right around the corner, Spanish SRS was built with amusement and utility in mind.  
 
-## Setup
+#### How to use:  
+-Login or create a username. 
+-Practice words on the 'Dashboard page' by defining and translating, then click the 'Start practicing' link to get started.  
+-Once on the 'Learning Route', the user will be presented with a spanish word and will then need to type in what they believe the translation is. If they guess correct, the user will be congratulated and will gain a point towards 'correct guesses' and the first word will then be pushed further into the list. If they guess incorrect, the user will gain a point towards 'incorrect guesses' and the word will be pushed to the next, next item in the list. This process continues to loop until the user is ready to take a break and log off.  
+-The user's score and correct/incorrect guesses will be saved in the database, so each time they log on they may begin where they left off.
 
-To setup the application
-
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
-
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
-
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
-
-## Running project
-
-This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
-
-## Running the tests
-
-This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
-
-Cypress has the following expectations:
-
-- You have cypress installed (this is a devDependency of the project)
-- You have your application running at http://localhost:3000.
-  - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `API_ENDPOINT`
-
-To start the tests run the command:
-
-```bash
-npm run cypress:open
-```
-
-On the first run of this command, the cypress application will verify its install. Any other runs after this, the verification will be skipped.
-
-The command will open up the Cypress application which reads tests from the `./cypress/integration/` directory. You can then run individual tests by clicking on the file names or run all tests by clicking the "run all tests" button in the cypress GUI.
-
-Tests will assert against your running localhost client application.
-
-You can also start all of the tests in the command line only (not using the GUI) by running the command:
-
-```bash
-npm run cypress:run
-```
-
-This will save video recordings of the test runs in the directory `./cypress/videos/`.
+#### Tech Stack:  
+Front End: React, JavaScript, Cypress, CSS3, HTML5, Vercel
